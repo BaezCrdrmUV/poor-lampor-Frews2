@@ -1,0 +1,72 @@
+﻿<Window x:Class="relojLamport.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:relojLamport"
+        mc:Ignorable="d"
+        Title="Poor Lamport" Height="368" Width="800">
+    <StackPanel Background="Black" Margin="0,0,0,-5">
+        <StackPanel Background="Azure" Width="243" Height="309" Margin="0,0,560,0">
+            <TextBlock Text="Proceso 1"/>
+            <TextBlock Text="Destino: " Height="17" Width="140" Margin="0,10,100,0"/>
+            <ComboBox x:Name="procesoDestinoP1" Width="50" Margin="0,-20,100,0"
+                      ItemsSource="{Binding listaProcesosP1}"/>
+            <TextBlock Text="Tiempo: " Height="17" Width="100" Margin="0,-20,-60,0"/>
+            <TextBox x:Name="tiempoP1" Width="50" Margin="0,-20,-110,0"
+                     TextCompositionManager.PreviewTextInput="EsNumero"/>
+            <TextBlock Text="Mensaje: "/>
+            <TextBox x:Name="MensajeP1" Width="100" Margin="0,0,135,0"/>
+            <TextBlock Text="Historial de mensajes recibidos" Margin="0,0,0,0"/>
+            <Button x:Name="botonEnviarP1" Width="62" Margin="100,-40,0,10" Cursor="Hand" 
+                    Background="WhiteSmoke" BorderBrush="Azure" Click="botonEnviar_Click" Height="21">
+                <StackPanel Orientation="Horizontal" Width="50" HorizontalAlignment="Center">
+                    <TextBlock Text="Enviar"/>
+                </StackPanel>
+            </Button>
+            <ListBox x:Name="listaMensajesP1" Width="100" Margin="0,10,150,0"/>
+            
+        </StackPanel>
+
+        <StackPanel Background="Azure" Width="243" Height="309" Margin="0,-310,0,0">
+            <TextBlock Text="Proceso 2"/>
+            <TextBlock Text="Destino: " Height="17" Width="140" Margin="0,10,100,0"/>
+            <ComboBox x:Name="procesoDestinoP2" Width="50" Margin="0,-20,100,0"
+                      ItemsSource="{Binding listaProcesosP2}"/>
+            <TextBlock Text="Tiempo: " Height="17" Width="100" Margin="0,-20,-60,0"/>
+            <TextBox x:Name="tiempoP2" Width="50" Margin="0,-20,-110,0"
+                     TextCompositionManager.PreviewTextInput="EsNumero"/>
+            <TextBlock Text="Mensaje: "/>
+            <TextBox x:Name="MensajeP2" Width="100" Margin="0,0,135,0"/>
+            <TextBlock Text="Historial de mensajes recibidos" Margin="0,0,0,0"/>
+            <Button x:Name="botonEnviarP2" Width="62" Margin="100,-40,0,10" Cursor="Hand" 
+                    Background="WhiteSmoke" BorderBrush="Azure" Click="botonEnviarP2_Click" Height="21">
+                <StackPanel Orientation="Horizontal" Width="50" HorizontalAlignment="Center">
+                    <TextBlock Text="Enviar"/>
+                </StackPanel>
+            </Button>
+            <ListBox x:Name="listaMensajesP2" Width="100" Margin="0,10,150,0"/>
+        </StackPanel>
+
+        <StackPanel Background="Azure" Width="243" Height="309" Margin="0,-310,-560,0">
+            <TextBlock Text="Proceso 3"/>
+            <TextBlock Text="Destino: " Height="17" Width="140" Margin="0,10,100,0"/>
+            <ComboBox x:Name="procesoDestinoP3" Width="50" Margin="0,-20,100,0"
+                      ItemsSource="{Binding listaProcesosP3}"/>
+            <TextBlock Text="Tiempo: " Height="17" Width="100" Margin="0,-20,-60,0"/>
+            <TextBox x:Name="tiempoP3" Width="50" Margin="0,-20,-110,0"
+                     TextCompositionManager.PreviewTextInput="EsNumero"/>
+            <TextBlock Text="Mensaje: "/>
+            <TextBox x:Name="MensajeP3" Width="100" Margin="0,0,130,0"/>
+            <TextBlock Text="Historial de mensajes recibidos" Margin="0,0,0,0"/>
+            <Button x:Name="botonEnviarP3" Width="62" Margin="100,-40,0,10" Cursor="Hand" 
+                    Background="WhiteSmoke" BorderBrush="Azure" Click="botonEnviarP3_Click" Height="21">
+                <StackPanel Orientation="Horizontal" Width="50" HorizontalAlignment="Center">
+                    <TextBlock Text="Enviar"/>
+                </StackPanel>
+            </Button>
+            <ListBox x:Name="listaMensajesP3" Width="100" Margin="0,10,150,0"/>
+        </StackPanel>
+    </StackPanel>
+    
+</Window>
