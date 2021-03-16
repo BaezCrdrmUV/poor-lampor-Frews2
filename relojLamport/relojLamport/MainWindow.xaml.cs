@@ -203,7 +203,7 @@ namespace relojLamport
             {
                 listaProcesos[0].RelojLogico++;
                 
-                if (mensaje.UnidadTiempo <= listaProcesos[0].RelojLogico)
+                if (mensaje.UnidadTiempo <= listaProcesos[mensaje.Destino.Identificador-1].RelojLogico)
                 {
                     RecibirMensaje(mensaje);
                     AgregarListaEspera(mensaje.Destino.Identificador);
@@ -222,7 +222,7 @@ namespace relojLamport
                 {
                     listaProcesos[1].RelojLogico++;
 
-                    if (mensaje.UnidadTiempo <= listaProcesos[1].RelojLogico)
+                    if (mensaje.UnidadTiempo <= listaProcesos[mensaje.Destino.Identificador-1].RelojLogico)
                     {
                         RecibirMensaje(mensaje);
                         AgregarListaEspera(mensaje.Destino.Identificador);
@@ -240,7 +240,7 @@ namespace relojLamport
                     {
                         listaProcesos[2].RelojLogico++;
 
-                        if (mensaje.UnidadTiempo <= listaProcesos[2].RelojLogico)
+                        if (mensaje.UnidadTiempo <= listaProcesos[mensaje.Destino.Identificador-1].RelojLogico)
                         {
                             RecibirMensaje(mensaje);
                             AgregarListaEspera(mensaje.Destino.Identificador);
